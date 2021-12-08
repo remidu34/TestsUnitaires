@@ -11,5 +11,5 @@ Tu es capable de réaliser de grandes choses.
 ### Nuget utilisé
 * Premier Nuget
 $ Install-Package FluentAssertions
-*Deuxième Nuget
+* Deuxième Nuget
 $Install-Package NFluent
