@@ -25,7 +25,10 @@ namespace TestsUnitaires
         {
             foreach(var table in tables)
             {
-                maitre.PrendTable(table);
+                if (table.serveur == null)
+                {
+                    table.PrendTableMaitre(maitre);
+                }
             }
         }
 

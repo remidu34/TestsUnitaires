@@ -8,6 +8,7 @@ namespace TestsUnitaires
 {
     public class Maitre
     {
+        public string name = "maitre";
         public List<Table> tables = new List<Table>();
         public void PrendTable(Table table)
         {

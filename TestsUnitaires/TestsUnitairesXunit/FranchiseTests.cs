@@ -37,51 +37,5 @@ namespace LeGrandRestaurant.Test
             var result = x * y * z;
             Assert.Equal(expected, result);
         }
-
-        /*[Fact(DisplayName = "ÉTANT DONNÉ une franchise ayant X restaurants de Y serveurs chacuns" +
-                            "QUAND tous les serveurs prennent une commande d'un montant Z" +
-                            "ALORS le chiffre d'affaires de la franchise est X * Y * Z")]
-        public void CarteFranchise()
-        {
-            // ÉTANT DONNE un restaurant ayant le statut de filiale d'une franchise
-            var tables = new Table[] { new Table() };
-            var serveurs = new Serveur[] { new Serveur() };
-            var restaurant = new Restaurant(tables, serveurs);
-            var franchise = new Franchise(restaurant);
-
-            // QUAND la franchise modifie le prix du plat
-            var nouveauPrix = new decimal(67.99);
-            var plat = new Plat();
-
-            franchise.FixerPrix(plat, nouveauPrix);
-
-            // ALORS le prix du plat dans le menu du restaurant est celui défini par la franchise
-            var prixDuPlat = restaurant.ObtenirPrix(plat);
-
-            Assert.Equal(nouveauPrix, prixDuPlat);
-        }
-
-        [Fact(DisplayName = "ÉTANT DONNÉ une franchise ayant X restaurants de Y serveurs chacuns" +
-                            "QUAND tous les serveurs prennent une commande d'un montant Z" +
-                            "ALORS le chiffre d'affaires de la franchise est X * Y * Z")]
-        public void CarteFranchise()
-        {
-            // ÉTANT DONNE un restaurant ayant le statut de filiale d'une franchise
-            var tables = new Table[] { new Table() };
-            var serveurs = new Serveur[] { new Serveur() };
-            var restaurant = new Restaurant(tables, serveurs);
-            var franchise = new Franchise(restaurant);
-
-            // QUAND la franchise modifie le prix du plat
-            var nouveauPrix = new decimal(67.99);
-            var plat = new Plat();
-
-            franchise.FixerPrix(plat, nouveauPrix);
-
-            // ALORS le prix du plat dans le menu du restaurant est celui défini par la franchise
-            var prixDuPlat = restaurant.ObtenirPrix(plat);
-
-            Assert.Equal(nouveauPrix, prixDuPlat);
-        }*/
     }
 }
