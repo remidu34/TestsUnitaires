@@ -21,8 +21,12 @@ namespace TestsUnitaires
             return _serveurs;
         }
 
-        public void DébuterService()
+        public void DébuterService(Maitre maitre, Table[] tables)
         {
+            foreach(var table in tables)
+            {
+                maitre.PrendTable(table);
+            }
         }
 
         public bool LaTableEstLibre(Table table)

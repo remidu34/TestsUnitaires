@@ -13,7 +13,7 @@ namespace LeGrandRestaurant.Test
             // ÉTANT DONNE un restaurant ayant le statut de filiale d'une franchise
             var tables = new Table[] { new Table() };
             var serveurs = new Serveur[] { new Serveur() };
-            var restaurant = new Restaurant(tables, serveurs);
+            var restaurant = new Restaurant[] { new Restaurant(tables, serveurs) };
             var franchise = new Franchise(restaurant);
 
             // QUAND la franchise modifie le prix du plat
@@ -23,7 +23,7 @@ namespace LeGrandRestaurant.Test
             franchise.FixerPrix(plat, nouveauPrix);
 
             // ALORS le prix du plat dans le menu du restaurant est celui défini par la franchise
-            var prixDuPlat = restaurant.ObtenirPrix(plat);
+            var prixDuPlat = restaurant[0].ObtenirPrix(plat);
 
             Assert.Equal(nouveauPrix, prixDuPlat);
         }
@@ -36,19 +36,19 @@ namespace LeGrandRestaurant.Test
             //ÉTANT DONNE un restaurant appartenant à une franchise et définissant un menu ayant un plat
             var tables = new Table[] { new Table() };
             var serveurs = new Serveur[] { new Serveur() };
-            var restaurant = new Restaurant(tables, serveurs);
+            var restaurant = new Restaurant[] { new Restaurant(tables, serveurs) };
             var franchise = new Franchise(restaurant);
             var plat = new Plat();
 
             var prixRestaurant = new decimal(12.99);
-            restaurant.FixerPrix(plat, prixRestaurant);
+            restaurant[0].FixerPrix(plat, prixRestaurant);
 
             //QUAND la franchise modifie le prix du plat
             var prixFranchise = new decimal(67.99);
             franchise.FixerPrix(plat, prixFranchise);
 
             //ALORS le prix du plat dans le menu du restaurant reste inchangé
-            var prixDuPlat = restaurant.ObtenirPrix(plat);
+            var prixDuPlat = restaurant[0].ObtenirPrix(plat);
 
             Assert.Equal(prixRestaurant, prixDuPlat);
         }

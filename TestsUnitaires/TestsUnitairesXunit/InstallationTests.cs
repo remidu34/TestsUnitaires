@@ -16,7 +16,8 @@ namespace LeGrandRestaurant.Test
             var tables = new Table[] { new Table() };
             var serveurs = new Serveur[] { new Serveur() };
             var restaurant = new Restaurant(tables, serveurs);
-            restaurant.DébuterService();
+            var maitre = new Maitre();
+            restaurant.DébuterService(maitre, tables);
 
             // QUAND un client est affecté à une table
             tables[0].InstallerClient();
@@ -34,8 +35,9 @@ namespace LeGrandRestaurant.Test
             var tables = new Table[] { new Table() };
             var serveurs = new Serveur[] { new Serveur() };
             var restaurant = new Restaurant(tables, serveurs);
+            var maitre = new Maitre();
 
-            restaurant.DébuterService();
+            restaurant.DébuterService(maitre, tables);
             tables[0].InstallerClient();
 
             // QUAND la table est libérée

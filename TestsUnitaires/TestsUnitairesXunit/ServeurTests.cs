@@ -6,7 +6,7 @@ namespace LeGrandRestaurant.Test
 {
     public class ServeurTests
     {
-        [Fact(DisplayName = "ÉTANT DONNÉ un nouveau serveur " +
+        /*[Fact(DisplayName = "ÉTANT DONNÉ un nouveau serveur " +
                             "QUAND on récupére son chiffre d'affaires " +
                             "ALORS celui-ci est à 0")]
         public void ServeurEqual0()
@@ -49,6 +49,6 @@ namespace LeGrandRestaurant.Test
             int Montant = serveur.Montant;
             // ALORS son chiffre d'affaires est la somme des deux commandes
             Assert.Equal(ChiffreAffaire, Montant * 2);
-        }
+        }*/
     }
 }

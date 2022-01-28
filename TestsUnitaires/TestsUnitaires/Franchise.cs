@@ -6,10 +6,13 @@ namespace TestsUnitaires
     {
         private readonly Menu _menu;
 
-        public Franchise(Restaurant restaurant)
+        public Franchise(Restaurant[] restaurants)
         {
             _menu = new Menu();
-            restaurant.ImposerMenu(_menu);
+            foreach (var restaurant in restaurants)
+            {
+                restaurant.ImposerMenu(_menu);
+            }
         }
 
         public void FixerPrix(Plat plat, decimal nouveauPrix)
